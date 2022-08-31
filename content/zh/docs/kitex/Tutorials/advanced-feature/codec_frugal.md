@@ -106,7 +106,7 @@ import (
 )
 
 func Echo() {
-    code := thrift.NewThriftCodecWithConfig(thrift.FastRead | thrift.FastWrite | thrift.FrugalRead | thrift.FrugalWrite)
+    codec := thrift.NewThriftCodecWithConfig(thrift.FastRead | thrift.FastWrite | thrift.FrugalRead | thrift.FrugalWrite)
     cli := echo.MustNewClient("a.b.c", client.WithPayloadCodec(codec))
     ...
 }
